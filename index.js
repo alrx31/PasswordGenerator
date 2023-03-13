@@ -1,11 +1,57 @@
 let inp = document.querySelector('#text')
+
+
 function Gen(){
-    let characters = `zxcvbnm,.asdfghjkl;'qwertyuiop[]1234567890-=!@#$%^&*()_+\`~|ячсмитьбю.фывапролджэйцукенгшщзхъ!"№;%:?*()_+ЯЧСМИТЬБЮФЫВАПРОЛДЖЖЖЖЭЙЦУКЕНГШЩЗХЪЁёZXCVBNMASDFGHJKLQWERTYUIOP`
-    let res = ''
-    for(let i = 0; i<=16; i++){
-        res+= characters[Math.floor(168*Math.random(0,1))]
+    let lang = document.querySelector('#lang').value
+    let caps = document.querySelector('#caps').value
+    let specs = document.querySelector('#spec').value
+    let num = document.querySelector('#numbers').value
+    let len = document.querySelector('#len').value
+
+
+    let rusD = 'ячсмитьббюфывапролджэйцукенгшщзхъё'
+    let rusU = 'ЯЧСМИТЬБЮФЫВАПРОЛДЖЭЙЦУКЕНГШЩЗХЪЁ'
+    let enD = 'zxcvbnmasdfghjklqwertyuiop'
+    let enU = 'ZXCVBNMASDFGHJKLQWERTYUIOP'
+    let nums = '1234567890'
+    let spec = `\`|,./;'[]!@#$%^&*()_+№";%:?*!":?><{}~` 
+    let characters = ''
+
+    if(lang == 'ru'  && caps == 'capsN'){
+        characters+= rusD
+    }else if(lang == 'en' && caps == 'capsN'){
+        characters+= enD
+    }else if(lang == 'ruen' && caps == 'capsN'){
+        characters+= rusD + enD
     }
+    if(lang == 'ru'  && caps == 'capsY'){
+        characters+= rusU
+    }else if(lang == 'en' && caps == 'capsY'){
+        characters+= enU
+    }else if(lang == 'ruen' && caps == 'capsY'){
+        characters+= rusU + enU
+    }
+
+    if(specs == 'specY'){
+        characters+= spec
+    }
+    if(num == 'numY'){
+        characters+= nums
+    }
+
+    let p = characters.length
+    let res = ''
+    for(let i = 0; i<=len; i++){
+        res+= characters[Math.floor(p*Math.random(0,1))]
+    }
+
+    console.log(characters)
+    characters = ''
+    console.log(characters)
+
     inp.value = res
+
+
 }
 function Copy(){
     let res = inp.value;

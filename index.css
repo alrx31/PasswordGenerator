@@ -24,6 +24,7 @@ body{
     top:0;
 }
 .block  {
+    padding: 10px;
     background-color: rgba(75, 75, 75, 0.7);
     border-radius: 20px;
     min-width: 50%;
@@ -67,6 +68,19 @@ body{
     background-color: rgb(162, 236, 162);
 }
 
+.ifs {
+    margin:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.ifs >*{
+    width: 50%;
+    height: 40px;
+    margin: 10px;
+}
+
 @media(max-width: 768px){
     .buts {
         flex-flow:column;
@@ -80,5 +94,8 @@ body{
     #text{
         width:90%;
         height: 60px;
+    }
+    .ifs >*{
+        width: 90%;
     }
 }
