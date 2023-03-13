@@ -31,7 +31,7 @@ function Gen(){
     }else if(lang == 'ruen' && caps == 'capsY'){
         characters+= rusU + enU
     }
-    if (caps == 'capsAll'){
+    if (caps == 'capsAll' && lang!= 'out'){
         characters += rusD + rusU + enD + enU
     }
 
@@ -44,6 +44,10 @@ function Gen(){
 
     let p = characters.length
     let res = ''
+    if(p == 0){
+        inp.value = 'нет символов'
+        return
+    }
     for(let i = 0; i<len; i++){
         res+= characters[Math.floor(p*Math.random(0,1))]
     }
