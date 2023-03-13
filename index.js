@@ -31,7 +31,14 @@ function Gen(){
     }else if(lang == 'ruen' && caps == 'capsY'){
         characters+= rusU + enU
     }
-    if (caps == 'capsAll' && lang!= 'out'){
+    if (caps == 'capsAll' && lang == 'ru'){
+        characters += rusD + rusU
+    }
+    if (caps == 'capsAll' && lang == 'en'){
+        characters +=enD + enU
+    }
+
+    if (caps == 'capsAll' && lang == 'ruen'){
         characters += rusD + rusU + enD + enU
     }
 
