@@ -31,6 +31,9 @@ function Gen(){
     }else if(lang == 'ruen' && caps == 'capsY'){
         characters+= rusU + enU
     }
+    if (caps == 'capsAll'){
+        characters += rusD + rusU + enD + enU
+    }
 
     if(specs == 'specY'){
         characters+= spec
