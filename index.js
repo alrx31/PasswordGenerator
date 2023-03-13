@@ -41,7 +41,7 @@ function Gen(){
 
     let p = characters.length
     let res = ''
-    for(let i = 0; i<=len; i++){
+    for(let i = 0; i<len; i++){
         res+= characters[Math.floor(p*Math.random(0,1))]
     }
 
