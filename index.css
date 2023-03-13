@@ -75,6 +75,7 @@ body{
     align-items: center;
     flex-flow: row wrap;
 }
+
 .ifs >*{
     width: 50%;
     height: 40px;
