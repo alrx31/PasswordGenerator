@@ -76,7 +76,7 @@ body{
     flex-flow: row wrap;
 }
 
-.ifs >*{
+.ifs *{
     width: 50%;
     height: 40px;
     margin: 10px;
@@ -96,7 +96,7 @@ body{
         width:90%;
         height: 60px;
     }
-    .ifs >*{
+    .ifs *{
         width: 90%;
     }
 }
