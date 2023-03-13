@@ -42,6 +42,13 @@ body{
     color:rgb(39, 39, 39);
     text-align:center;
 }
+.buts {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
 .buts button{
     margin:20px;
     width:10vw;
@@ -58,4 +65,20 @@ body{
 .buts button:active{
     border:2px solid rgb(0, 255, 0);
     background-color: rgb(162, 236, 162);
+}
+
+@media(max-width: 768px){
+    .buts {
+        flex-flow:column;
+    }
+    .block{
+        width:90%;
+    }
+    .buts button{
+        width:60%;
+    }
+    #text{
+        width:90%;
+        height: 60px;
+    }
 }
