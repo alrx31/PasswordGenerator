@@ -25,7 +25,7 @@ body{
 }
 .block  {
     padding: 10px;
-    background-color: rgba(75, 75, 75, 0.7);
+    background-color:#3a3a3a69;
     border-radius: 20px;
     min-width: 50%;
     min-height: 40vh;
