@@ -7,8 +7,6 @@ function Gen(){
     let specs = document.querySelector('#spec').value
     let num = document.querySelector('#numbers').value
     let len = document.querySelector('#len').value
-
-
     let rusD = 'ячсмитьббюфывапролджэйцукенгшщзхъё'
     let rusU = 'ЯЧСМИТЬБЮФЫВАПРОЛДЖЭЙЦУКЕНГШЩЗХЪЁ'
     let enD = 'zxcvbnmasdfghjklqwertyuiop'
@@ -37,18 +35,15 @@ function Gen(){
     if (caps == 'capsAll' && lang == 'en'){
         characters +=enD + enU
     }
-
     if (caps == 'capsAll' && lang == 'ruen'){
         characters += rusD + rusU + enD + enU
     }
-
     if(specs == 'specY'){
         characters+= spec
     }
     if(num == 'numY'){
         characters+= nums
     }
-
     let p = characters.length
     let res = ''
     if(p == 0){
@@ -58,15 +53,11 @@ function Gen(){
     for(let i = 0; i<len; i++){
         res+= characters[Math.floor(p*Math.random(0,1))]
     }
-
-    console.log(characters)
     characters = ''
-    console.log(characters)
-
     inp.value = res
-
-
 }
+
+
 function Copy(){
     let res = inp.value;
     inp.select()

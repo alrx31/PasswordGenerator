@@ -22,7 +22,7 @@ body{
     position: absolute;
     left:0;
     top:0;
-}
+}   
 .block  {
     padding: 10px;
     background-color:#3a3a3a69;
@@ -85,6 +85,9 @@ body{
 @media(max-width: 768px){
     .buts {
         flex-flow:column;
+    }
+    .buts button:hover{
+        background-color: white;
     }
     .block{
         width:90%;
